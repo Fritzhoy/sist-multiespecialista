@@ -1,22 +1,53 @@
 import random
 
-class GeradorDeTarefa:
-    def __init__(self):
-        self.modelos_tarefas = [
-            "revisar texto do capítulo 1",
-            "corrigir erros gramaticais no prefácio",
-            "criar sinopse para o novo livro infantil",
-            "definir preço de capa para o livro de poesia",
-            "planejar campanha de divulgação nas redes sociais",
-            "agendar distribuição para as livrarias",
-            "calcular faturamento do mês",
-            "atualizar estoque do livro 'A Jornada do Herói'",
-            "analisar viabilidade de reimpressão",
-            "verificar pagamentos pendentes dos autores"
-        ]
+class GeradorDeTarefa(object):
 
-    def gerar_tarefa(self):
-        return random.choice(self.modelos_tarefas)
+    def __init__(self, bancada):
+        self.Bancada = bancada
 
-    def gerar_varias(self, n=3):
-        return random.sample(self.modelos_tarefas, min(n, len(self.modelos_tarefas)))
+    def funcionamento_normal(self):
+        return ['Verificou que o computador está funcionando perfeitamente!', 'sem_erros']
+
+    def conectar_alimentacao(self):
+        return ['Ligou o computador na tomada!', 'falha_eletrica']
+
+    def fonte_queimada(self):
+        return ['Trocou a fonte de energia porque estava queimada!', 'falha_eletrica']
+
+    def circuito_de_alimentacao(self):
+        return ['Diagnosticou que o circuito de alimentação da placa mãe estava estava com problema e encaminhou ao eletricista!', 'falha_eletrica']
+    
+    def fonte_com_problema(self):
+        return ['Encaminhou a fonte de energia para a assistência porque estava com problema!', 'falha_eletrica']
+
+    def checar_processador_e_memoria_ram(self):
+        return ['Trocou a pasta térmica e passou borracha na memória ram e resolveu!', 'componente_aquecendo']
+    
+    def problema_na_placa_mae(self):
+        return ['Trocou a placa mãe porque estava com problema!', 'problema_hardware']
+    
+    def hd_ou_ssd_desconectado_ou_com_defeito(self):
+        return ['Conectou o cabo do HD que estava mal conectado!', 'problema_hardware']
+    
+    def ajustar_boot(self):
+        return ['Ajustou o boot do computador para inicializar pelo HD!', 'problema_software']
+    
+    def substituir_hd_ou_ssd(self):
+        return ['Substituiu o HD por um novo!', 'problema_hardware']
+    
+    def imagem_so_corrompida(self):
+        return ['Reinstalou o sistema operacional porque a imagem estava corrompida!', 'problema_software']
+    
+   
+    def adicionaTarefa(self):
+        self.Bancada.adicionaTarefa('funcionamento_normal', self.funcionamento_normal())
+        self.Bancada.adicionaTarefa('conectar_alimentacao', self.conectar_alimentacao())
+        self.Bancada.adicionaTarefa('fonte_queimada', self.fonte_queimada())
+        self.Bancada.adicionaTarefa('circuito_de_alimentacao', self.circuito_de_alimentacao())
+        self.Bancada.adicionaTarefa('fonte_com_problema', self.fonte_com_problema())
+        self.Bancada.adicionaTarefa('checar_processador_e_memoria_ram', self.checar_processador_e_memoria_ram())
+        self.Bancada.adicionaTarefa('problema_na_placa_mae', self.problema_na_placa_mae())
+        self.Bancada.adicionaTarefa('hd_ou_ssd_desconectado_ou_com_defeito', self.hd_ou_ssd_desconectado_ou_com_defeito())
+        self.Bancada.adicionaTarefa('ajustar_boot', self.ajustar_boot())
+        self.Bancada.adicionaTarefa('substituir_hd_ou_ssd', self.substituir_hd_ou_ssd())
+        self.Bancada.adicionaTarefa('imagem_so_corrompida', self.imagem_so_corrompida())

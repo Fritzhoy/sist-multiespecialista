@@ -1,6 +1,11 @@
-class AbstractEspecialista:
-    def pode_responder(self, tarefa: str) -> bool:
-        raise NotImplementedError
+from abc import ABC, abstractmethod
 
-    def responder(self, tarefa: str) -> str:
-        raise NotImplementedError
+class AbstractEspecialista(ABC):
+    def __init__(self):
+        self.Bancada = None
+
+    @abstractmethod
+    def eh_ativado(self): pass
+
+    @abstractmethod
+    def contribui(self): pass
