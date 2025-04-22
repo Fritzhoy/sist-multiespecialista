@@ -26,7 +26,3 @@ class Atendente(AbstractEspecialista):
         # Envia para triagem
         self.Bancada.estadoCompartilhado['sintomas'] = sintomas_iniciais
         print("Atendente recebeu o computador e encaminhou para a triagem.")
-
-        # # Remove o problema tratado para não entrar em loop
-        # if 'computador_com_problema' in self.Bancada.estadoCompartilhado['problemas']:
-        #     self.Bancada.estadoCompartilhado['problemas'].remove('computador_com_problema')

@@ -4,6 +4,7 @@
 # lista 'instancias-de-problemas', chama cada especialista a contribuir e
 # adiciona o resultado/contribuição na lista de contribuições do quadro-negro.
 class Controlador:
+    
     def __init__(self, bancada, GeradorDeTarefa, limite = 120):
         self.Bancada = bancada
         self.GeradorDeTarefa = GeradorDeTarefa

@@ -10,7 +10,7 @@ class EngEletrico(AbstractEspecialista):
     def expertise(self):
         p = None
         if 'problema_hardware' in self.Bancada.estadoCompartilhado['problemas']:
-            p = self.Bancada.pegaParametros('problema_hardware')  # Corrigido aqui também
+            p = self.Bancada.pegaParametros('problema_hardware')  
             return ['problema_hardware', p]
 
     @property

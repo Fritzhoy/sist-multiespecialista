@@ -6,6 +6,7 @@ from especialista.Suporte import Suporte
 from especialista.Tecnico import Tecnico
 from especialista.Estagiario import Estagiario
 from especialista.Eletricista import Eletricista
+from especialista.Testador import Testador
 from especialista.Finalizador import Finalizador
 from geradordetarefa.GeradorDeTarefa import GeradorDeTarefa
 from controlador.Controlador import Controlador
@@ -17,7 +18,7 @@ gerador = GeradorDeTarefa(bancada)
 triagem = Triagem(gerador)
 
 # Inicializando os especialistas
-especialistas = [Atendente(), Triagem(gerador), Tecnico(), Estagiario(), EngEletrico(), Eletricista(), Suporte(), Finalizador()]
+especialistas = [Atendente(), Triagem(gerador), Tecnico(), Estagiario(), EngEletrico(), Eletricista(), Suporte(), Testador(), Finalizador()]
 
 # Registrando especialistas na bancada
 for esp in especialistas:

@@ -25,4 +25,4 @@ class Tecnico(AbstractEspecialista):
         
         # Adiciona próxima tarefa para Finalizador
         self.Bancada.estadoCompartilhado['problemas'].append('verificacao_final')
-        self.Bancada.adicionaTarefa('verificacao_final', ['fonte substituída, pronto para teste final'])
+        self.Bancada.adicionaTarefa('verificacao_final', ['computador pronto para teste final'])
