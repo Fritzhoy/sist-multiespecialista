@@ -15,13 +15,13 @@ class GeradorDeTarefa(object):
         return ['Trocou a fonte de energia porque estava queimada!', 'falha_eletrica']
 
     def circuito_de_alimentacao(self):
-        return ['Diagnosticou que o circuito de alimentação da placa mãe estava estava com problema e encaminhou ao eletricista!', 'falha_eletrica']
+        return ['Diagnosticou que o circuito de alimentação da placa mãe estava estava com problema!', 'falha_eletrica']
     
     def fonte_com_problema(self):
         return ['Encaminhou a fonte de energia para a assistência porque estava com problema!', 'falha_eletrica']
 
     def checar_processador_e_memoria_ram(self):
-        return ['Trocou a pasta térmica e passou borracha na memória ram e resolveu!', 'componente_aquecendo']
+        return ['Trocou a pasta térmica e passou borracha na memória ram e resolveu!', 'problema_hardware']
     
     def problema_na_placa_mae(self):
         return ['Trocou a placa mãe porque estava com problema!', 'problema_hardware']
