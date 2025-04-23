@@ -3,8 +3,10 @@ from .AbstractEspecialista import AbstractEspecialista
 
 class Eletricista(AbstractEspecialista):
     def eh_ativado(self):
-        return 'falha_eletrica' in self.Bancada.estadoCompartilhado['problemas']
-
+        if'falha_eletrica' in self.Bancada.estadoCompartilhado['problemas']:
+            return True
+        else:
+            return False
     @property
     def expertise(self):
         p = None

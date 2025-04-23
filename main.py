@@ -34,4 +34,11 @@ print("\n--- RESULTADO FINAL ---")
 print("Progresso:", bancada.estadoCompartilhado['progresso'])
 print("Contribuições:")
 for x in contribuicoes:
+    try:
+        #
+        if x[0][1] is None:
+            continue
+    #Caso a estrutura não seja esperada, ignora
+    except (IndexError, TypeError):
+        continue
     print(x)

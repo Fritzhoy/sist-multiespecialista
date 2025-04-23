@@ -4,7 +4,7 @@ from .AbstractEspecialista import AbstractEspecialista
 class Suporte(AbstractEspecialista):
     def eh_ativado(self):
         if 'sem_erros' in self.Bancada.estadoCompartilhado['problemas']:
-            return True
+             True
         else: 
             return False
         

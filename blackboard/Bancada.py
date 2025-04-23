@@ -22,6 +22,9 @@ class Bancada:
 
     def pegaParametros(self, problema):
         return self.estadoCompartilhado['instancias'].get(problema, [])
+    
+    def mostraTarefas(self):
+        print('instancias',self.estadoCompartilhado['instancias'])
 
     def adicionaContribuicao(self, contrib):
         self.estadoCompartilhado['contribuicoes'].append(contrib)

@@ -5,7 +5,10 @@ from .Triagem import Triagem
 class Atendente(AbstractEspecialista):
 
     def eh_ativado(self):
-        return 'computador_com_problema' in self.Bancada.estadoCompartilhado['problemas']
+        if 'computador_com_problema' in self.Bancada.estadoCompartilhado['problemas']:
+            return True
+        else:
+            return False
 
     @property
     def expertise(self):

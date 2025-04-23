@@ -13,7 +13,7 @@ class Controlador:
     def loop(self):
       while self.Bancada.estadoCompartilhado['progresso'] < self.limite:
           self.GeradorDeTarefa.adicionaTarefa()
-     #     self.Bancada.mostraTarefas()
+          #self.Bancada.mostraTarefas()
           for especialista in self.Bancada.especialistas:
               if especialista.eh_ativado:
                   especialista.contribui()
